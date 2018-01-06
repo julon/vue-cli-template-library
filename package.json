@@ -1,0 +1,48 @@
+{
+  "name": "vue-lib-template",
+  "version": "0.0.0-development",
+  "license": "MIT",
+  "description": "Template for developing open-source vue.js libraries",
+  "scripts": {
+    "cz": "git-cz",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^5.2.8",
+    "@commitlint/config-conventional": "^5.2.3",
+    "@semantic-release/changelog": "^1.0.0",
+    "@semantic-release/git": "^2.0.1",
+    "@semantic-release/github": "^3.0.1",
+    "@semantic-release/npm": "^2.6.1",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^0.14.3",
+    "semantic-release": "^11.0.2",
+    "vue-cli": "^2.8.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "getLastRelease": "@semantic-release/npm",
+    "publish": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julon/vue-lib-template.git"
+  }
+}

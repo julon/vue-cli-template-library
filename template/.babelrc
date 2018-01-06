@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["vue-app", {
+      "modules": false
+    }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "@": "./src"
+      },
+      "extensions": [".js", ".vue", ".json"]
+    }]
+  ],
+  "env": {
+    "test": {
+      "presets": ["vue-app"],
+      "plugins": ["dynamic-import-node"]
+    }
+  }
+}
