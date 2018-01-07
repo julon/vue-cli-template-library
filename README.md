@@ -8,7 +8,7 @@
 
 ```bash
 $ npm install -g vue-cli
-$ vue init julon/vue-lib-template my-project
+$ vue init julon/vue-cli-template-library my-project
 $ cd my-project
 $ npm install
 $ npm run storybook
