@@ -1,6 +1,6 @@
 {
   "name": "vue-lib-template",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Template for developing open-source vue.js libraries",
   "repository": {
