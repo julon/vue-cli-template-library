@@ -1,16 +1,16 @@
 {
-  "name": "vue-lib-template",
+  "name": "vue-cli-template-library",
   "version": "1.0.0",
   "license": "MIT",
   "description": "Template for developing open-source vue.js libraries",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julon/vue-lib-template.git"
+    "url": "https://github.com/julon/vue-cli-template-library.git"
   },
   "bugs": {
-    "url": "https://github.com/julon/vue-lib-template/issues"
+    "url": "https://github.com/julon/vue-cli-template-library/issues"
   },
-  "homepage": "https://github.com/julon/vue-lib-template#readme",
+  "homepage": "https://github.com/julon/vue-cli-template-library#readme",
   "keywords": [
     "vue",
     "vue-component",

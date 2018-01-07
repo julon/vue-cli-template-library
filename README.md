@@ -1,8 +1,8 @@
-# vue-lib-template
+# vue-cli-template-library
 
 > Template for developing open-source vue.js libraries
 
-> Rollup + SemanticRelease + Jest + Babel + Storybook + TravisCI
+> Rollup + Jest + Babel + Storybook + TravisCI + SemanticRelease
 
 ## Usage
 

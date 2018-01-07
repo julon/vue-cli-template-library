@@ -5,6 +5,8 @@
 
 > {{ description }}
 
+> Generated using [vue-cli-template-library](https://github.com/julon/vue-cli-template-library).
+
 ## Usage
 
 ```bash
@@ -40,23 +42,30 @@ npm run cz
 
 This repository is intended to be used with travisCI for deployment. [Semantic-release](https://github.com/semantic-release/semantic-release) is used and setup to auto-generate changelog, auto-publish to npm and auto-release to github based on commit messages structure. See [Commit Convention](.github/COMMIT_CONVENTION.md).
 
-You may need to install [Semantic-release-cli](https://github.com/semantic-release/cli) to pre-configure properly travisCI with npm and github credentials.
+You may need to install [Semantic-release-cli](https://github.com/semantic-release/cli) to enable and pre-configure travisCI with npm and github tokens.
 
-Note : Your npm account must be protected by a two-factor authentification in auth-only mode :
+So to enjoy an automated continuous deployment, it is required to have a NPM account, to have this project hosted on github, and to have previously login to travisCI.
+
+Warning: After setting up semantic-release, your library will be publish automatically to npm and release to github. If you are not ready to publish to npm or to release you can do this later.
+
 ```bash
+# Login to npm from your command-line
+npm login
+
+# Your npm account must be protected by a two-factor authentification in auth-only mode
 npm profile enable-2fa auth-only
-```
 
-Then activate travisCI for your repository and launch semantic-release-cli :
+# Create your token manually since semantic-release-cli is not working yet with npm in 2FA
+npm token create
 
-```bash
+# Then activate travisCI for your repository and launch semantic-release-cli
 npm install -g semantic-release-cli
-
 cd thisRepository
+semantic-release-cli setup --npm-token=YOUR_NPM_TOKEN
 
-semantic-release-cli setup
-# Enter your github and npm credentials to create required token
-# Tokens will be injected in your travisCI repository config as environment variables
+# Fill your github credentials, select travisCI and select to replace .travis.yml
+# TravisCI will be automatically enabled for your github repository
+# And tokens will be injected in your travisCI repository config as environment variables
 ```
 
 If everything is setup properly, every commit on master will generate a release if needed automatically. For the win.
