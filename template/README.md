@@ -7,68 +7,77 @@
 
 > Generated using [vue-cli-template-library](https://github.com/julon/vue-cli-template-library).
 
-## Usage
+## Installation
+```
+npm install {{ name }}
+```
+{{ name }} can be used as a module in both CommonJS and ES modular environments.
 
-```bash
-# Install dependencies
-npm install
+When in non-modular environment, {{ name }} will register all the components to vue by itself.</p>
 
-# Build 
-npm run build
+### ES6
+```js
+//
+// You can register a component manually
+//
+import { HelloWorld } from '{{ name }}';
 
-# Run development server with storybook
-npm run storybook
+export default {
+  ...
+  components: {
+    HelloWorld
+  },
+  ...
+};
 
-# Run all tests with lint/jest
-npm run test
+//
+// or register the whole module with vue
+//
+import ModuleLibrary from '{{ name }}';
 
-# Run test in watch mode
-npm run test:watch
-
-# Update test snapshot
-npm run test:update
-
-# Run linter
-npm run lint
-
-# Run linter with auto fix
-npm run lint:fix
-
-# Commit files with commitizen (use this instead of git commit)
-npm run cz
+// Install this library
+Vue.use(ModuleLibrary);
 ```
 
-## Deployment
+### CommonJS
+```js
+//
+// You can register a component manually
+//
+var Vue = require('vue');
+var ModuleLibrary = require('{{ name }}');
 
-This repository is intended to be used with travisCI for deployment. [Semantic-release](https://github.com/semantic-release/semantic-release) is used and setup to auto-generate changelog, auto-publish to npm and auto-release to github based on commit messages structure. See [Commit Convention](.github/COMMIT_CONVENTION.md).
+var YourComponent = Vue.extend({
+  ...
+  components: {
+    'hello-world': ModuleLibrary.HelloWorld
+  },
+  ...
+});
 
-You may need to install [Semantic-release-cli](https://github.com/semantic-release/cli) to enable and pre-configure travisCI with npm and github tokens.
+//
+// or register the whole module with vue
+//
+var Vue = require('vue');
+var ModuleLibrary = require('{{ name }}');
 
-So to enjoy an automated continuous deployment, it is required to have a NPM account, to have this project hosted on github, and to have previously login to travisCI.
-
-Warning: After setting up semantic-release, your library will be publish automatically to npm and release to github. If you are not ready to publish to npm or to release you can do this later.
-
-```bash
-# Login to npm from your command-line
-npm login
-
-# Your npm account must be protected by a two-factor authentification in auth-only mode
-npm profile enable-2fa auth-only
-
-# Create your token manually since semantic-release-cli is not working yet with npm in 2FA
-npm token create
-
-# Then activate travisCI for your repository and launch semantic-release-cli
-npm install -g semantic-release-cli
-cd thisRepository
-semantic-release-cli setup --npm-token=YOUR_NPM_TOKEN
-
-# Fill your github credentials, select travisCI and select to replace .travis.yml
-# TravisCI will be automatically enabled for your github repository
-# And tokens will be injected in your travisCI repository config as environment variables
+// Install this library
+Vue.use(ModuleLibrary);
 ```
 
-If everything is setup properly, every commit on master will generate a release if needed automatically. For the win.
+### Browser
+
+```html
+<script src="path/to/vue/vue.min.js"></script>
+<script src="path/to/{{ name }}/dist/{{ name }}.min.js"></script>
+<!-- Components are registered globally -->
+```
+
+### After that, you can use it in your templates:
+
+```html
+<hello-world></hello-world>
+```
 
 ## Changelog
 
