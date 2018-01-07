@@ -41,7 +41,7 @@ $ npm run storybook
   * Auto-release in github
   * Auto-publish to npm
   * Enable this features by using the semantic-release-cli
-```
+
 
 ## Fork It And Make Your Own
 You can fork this repo to create your own boilerplate, and use it with vue-cli:
