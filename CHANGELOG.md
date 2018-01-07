@@ -1,3 +1,11 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/julon/vue-cli-template-library/compare/b35a4c70d94d8775410c5d7494feba75c95f901b...v1.1.2) (2018-01-07)
+
+
+### Bug Fixes
+
+* move documentation to Contributing.md ([e4fca99](https://github.com/julon/vue-cli-template-library/commit/e4fca99))
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/julon/vue-cli-template-library/compare/42189801ce39fe4ff74ab05c1ccc9ff257996ce7...v1.1.1) (2018-01-07)
 
