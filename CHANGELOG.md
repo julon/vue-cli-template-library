@@ -1,3 +1,11 @@
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/julon/vue-cli-template-library/compare/e4fca996214f63c26a6cb3b717d75aa79306b0b8...v1.1.3) (2018-01-08)
+
+
+### Bug Fixes
+
+* change regex of jest transform ([fd1640f](https://github.com/julon/vue-cli-template-library/commit/fd1640f))
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/julon/vue-cli-template-library/compare/b35a4c70d94d8775410c5d7494feba75c95f901b...v1.1.2) (2018-01-07)
 
