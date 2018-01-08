@@ -1,5 +1,7 @@
 # vue-cli-template-library
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/julon/vue-cli-template-library.svg)](https://greenkeeper.io/)
+
 > Template for developing open-source vue.js libraries
 
 > Rollup + Jest + Babel + Storybook + TravisCI + SemanticRelease
