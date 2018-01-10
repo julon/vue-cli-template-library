@@ -1,3 +1,11 @@
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/julon/vue-cli-template-library/compare/83a77e09b49e970f1047a446636fcee0511a6cc7...v1.1.5) (2018-01-10)
+
+
+### Bug Fixes
+
+* add complete message in meta and update docs ([e14a247](https://github.com/julon/vue-cli-template-library/commit/e14a247))
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/julon/vue-cli-template-library/compare/fd1640fff063d04b578e56b98213dc125376cfea...v1.1.4) (2018-01-09)
 
