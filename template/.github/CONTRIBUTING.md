@@ -30,10 +30,20 @@ npm run lint:fix
 # Commit files with commitizen (use this instead of git commit)
 npm run cz
 ```
+## Workflow
+
+- Create a component in the src/components folder
+- Add tests in the src/components/\_\_tests\_\_ folder
+- Register this component in src/index.js
+- Write stories which use your component as a template in src/stories/index.stories.js
+- Run `npm run storybook` to author your components by having a development environment
+- Run lint and tests before commiting anything
+- Commit using [Commit Convention](.github/COMMIT_CONVENTION.md) and push to github
+- If deployment is setup correctly(see next section), your components will be available on npm and release on github :)
 
 ## Deployment
 
-This repository is intended to be used with travisCI for deployment. [Semantic-release](https://github.com/semantic-release/semantic-release) is used and setup to auto-generate changelog, auto-publish to npm and auto-release to github based on commit messages structure. See [Commit Convention](.github/COMMIT_CONVENTION.md).
+This repository is intended to be used with travisCI for deployment. [Semantic-release](https://github.com/semantic-release/semantic-release) is used and setup to auto-generate changelog, auto-publish to npm and auto-release to github based on commit messages structure. For it to work properly you have to follow this [Commit Convention](.github/COMMIT_CONVENTION.md).
 
 You may need to install [Semantic-release-cli](https://github.com/semantic-release/cli) to enable and pre-configure travisCI with npm and github tokens.
 

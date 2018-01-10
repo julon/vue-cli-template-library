@@ -1,10 +1,15 @@
 # vue-cli-template-library
-
+![Commitizen](https://img.shields.io/badge/Commitizen-enabled-brightgreen.svg)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+![Npm badge](https://img.shields.io/npm/v/vue-cli-template-library.svg)
+![Travis badge](https://img.shields.io/travis/julon/vue-cli-template-library.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/julon/vue-cli-template-library.svg)](https://greenkeeper.io/)
 
 > Template for developing open-source vue.js libraries
 
-> Rollup + Jest + Babel + Storybook + TravisCI + SemanticRelease
+> You fell in love with Vue.js and want to create your own unit-tested and documented library to share with everyone but you don't want to spend the whole time set things up? This template is for you! It will take care of managing versioning and publishing to github and npm automatically, so you just need to focus on commiting your pieces of code. Packed with best-practices stuff(linters, preprocessors..) and publishable skeleton.
+
+> Rollup + Jest + Babel + Storybook + TravisCI + SemanticRelease + ❤️
 
 ## Usage
 

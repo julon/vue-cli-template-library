@@ -3,7 +3,7 @@ module.exports = {
     name: {
       type: "string",
       required: true,
-      label: "Project name"
+      label: "Project name (kebab-case only)"
     },
     description: {
       type: "string",
@@ -27,5 +27,6 @@ module.exports = {
       default: "user/repository"
     }
   },
-  "skipInterpolation": "src/**/*.vue"
+  "skipInterpolation": "src/**/*.vue",
+  "completeMessage": "To get started and/or setup your automatic deployment, please read the contributing documentation: {{destDirName}}/.github/CONTRIBUTING.md"
 }
