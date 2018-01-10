@@ -23,7 +23,7 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "@commitlint/cli": "^5.2.8",
+    "@commitlint/cli": "^6.0.0",
     "@commitlint/config-conventional": "^5.2.3",
     "@semantic-release/changelog": "^1.0.0",
     "@semantic-release/git": "^2.0.1",
