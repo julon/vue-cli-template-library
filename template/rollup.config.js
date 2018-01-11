@@ -10,33 +10,33 @@ import vue from "rollup-plugin-vue";
 import { minify } from "uglify-es";
 import path from "path";
 
-const projectSlug = "{{ name }}";
+const projectName = "{{ name }}";
 
 const builds = {
   // (CommonJS). Used by bundlers e.g. Webpack & Browserify
   cjs: {
     entry: "src/index.js",
-    dest: `dist/${projectSlug}.common.js`,
+    dest: `dist/${projectName}.common.js`,
     format: "cjs"
   },
   // (ES Modules). Used by bundlers that support ES Modules,
   // e.g. Rollup & Webpack 2
   esm: {
     entry: "src/index.js",
-    dest: `dist/${projectSlug}.esm.js`,
+    dest: `dist/${projectName}.esm.js`,
     format: "es"
   },
   // build (Browser)
   "umd-dev": {
     entry: "src/index.umd.js",
-    dest: `dist/${projectSlug}.js`,
+    dest: `dist/${projectName}.js`,
     format: "umd",
     env: "development"
   },
   // production build (Browser)
   "umd-prod": {
     entry: "src/index.umd.js",
-    dest: `dist/${projectSlug}.min.js`,
+    dest: `dist/${projectName}.min.js`,
     format: "umd",
     env: "production"
   }
@@ -67,7 +67,7 @@ function genConfig(name) {
       exports: "named",
       file: opts.dest,
       format: opts.format,
-      name: opts.moduleName || projectSlug
+      name: opts.moduleName || projectName
     }
   };
 
@@ -102,8 +102,5 @@ function genConfig(name) {
   return config;
 }
 
-if (process.env.TARGET) {
-  module.exports = genConfig(process.env.TARGET);
-} else {
-  module.exports = genConfig("umd-prod");
-}
+const target = process.env.TARGET || "umd-prod";
+module.exports = genConfig(target);
