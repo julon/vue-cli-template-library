@@ -1,3 +1,11 @@
+<a name="1.1.6"></a>
+## [1.1.6](https://github.com/julon/vue-cli-template-library/compare/e14a2478feb6d99ec84af52d07f3a07969672c97...v1.1.6) (2018-01-11)
+
+
+### Bug Fixes
+
+* remove unused alias @ support ([86901db](https://github.com/julon/vue-cli-template-library/commit/86901db))
+
 <a name="1.1.5"></a>
 ## [1.1.5](https://github.com/julon/vue-cli-template-library/compare/83a77e09b49e970f1047a446636fcee0511a6cc7...v1.1.5) (2018-01-10)
 
