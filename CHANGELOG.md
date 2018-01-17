@@ -1,3 +1,11 @@
+<a name="1.1.7"></a>
+## [1.1.7](https://github.com/julon/vue-cli-template-library/compare/86901db27f73f731cd78cebee06c8b64b1a58ca3...v1.1.7) (2018-01-17)
+
+
+### Bug Fixes
+
+* **package:** bump packages versions in template ([e24dbfe](https://github.com/julon/vue-cli-template-library/commit/e24dbfe))
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/julon/vue-cli-template-library/compare/e14a2478feb6d99ec84af52d07f3a07969672c97...v1.1.6) (2018-01-11)
 
