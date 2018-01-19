@@ -1,3 +1,16 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/julon/vue-cli-template-library/compare/e24dbfe0b5a1876dc89f9f06839896d59eb84310...v1.2.0) (2018-01-19)
+
+
+### Bug Fixes
+
+* using npm instead of yarn in scripts ([6a11b76](https://github.com/julon/vue-cli-template-library/commit/6a11b76))
+
+
+### Features
+
+* **build:** add globals and externals ([586aa9a](https://github.com/julon/vue-cli-template-library/commit/586aa9a))
+
 <a name="1.1.7"></a>
 ## [1.1.7](https://github.com/julon/vue-cli-template-library/compare/86901db27f73f731cd78cebee06c8b64b1a58ca3...v1.1.7) (2018-01-17)
 
