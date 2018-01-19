@@ -29,7 +29,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "build": "npm run build:cjs && yarn run build:es && yarn run build:umd:dev && yarn run build:umd:prod",
+    "build": "npm run build:cjs && npm run build:es && npm run build:umd:dev && npm run build:umd:prod",
     "build:cjs": "rollup -c --environment TARGET:cjs",
     "build:es": "rollup -c --environment TARGET:esm",
     "build:umd:dev": "rollup -c --environment TARGET:umd-dev",
