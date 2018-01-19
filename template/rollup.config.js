@@ -15,6 +15,11 @@ import pack from "./package.json";
 
 const projectName = "{{ name }}";
 
+// compute globals from dependencies
+const globals = pack.dependencies && Object.assign({}, ...Object.keys(pack.dependencies).map((key) => ({
+  [key]: camelCase(key)
+})));
+
 const builds = {
   // (CommonJS). Used by bundlers e.g. Webpack & Browserify
   cjs: {
@@ -71,9 +76,7 @@ function genConfig(name) {
       file: opts.dest,
       format: opts.format,
       // define globals in window from external dependencies
-      globals: Object.assign({}, ...Object.keys(pack.dependencies).map((key) => ({
-        [key]: camelCase(key)
-      }))),
+      globals,
       name: opts.moduleName || projectName
     }
   };
