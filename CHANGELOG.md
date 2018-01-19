@@ -1,3 +1,12 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/julon/vue-cli-template-library/compare/6a11b7671e6a07a4d366cc67da987aab790b7c94...v1.2.1) (2018-01-19)
+
+
+### Bug Fixes
+
+* add dependencies property test ([47a2ef1](https://github.com/julon/vue-cli-template-library/commit/47a2ef1))
+* replace globals func by assign to merge obj ([f7c316f](https://github.com/julon/vue-cli-template-library/commit/f7c316f))
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/julon/vue-cli-template-library/compare/e24dbfe0b5a1876dc89f9f06839896d59eb84310...v1.2.0) (2018-01-19)
 
