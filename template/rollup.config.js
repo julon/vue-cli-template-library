@@ -1,3 +1,5 @@
+import { camelCase } from "lodash";
+import path from "path";
 import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import filesize from "rollup-plugin-filesize";
@@ -8,7 +10,8 @@ import replace from "rollup-plugin-replace";
 import uglify from "rollup-plugin-uglify";
 import vue from "rollup-plugin-vue";
 import { minify } from "uglify-es";
-import path from "path";
+
+import pack from "./package.json";
 
 const projectName = "{{ name }}";
 
@@ -46,7 +49,7 @@ function genConfig(name) {
   const opts = builds[name];
   const config = {
     input: opts.entry,
-    external: opts.external,
+    external: (id) => pack.dependencies && pack.dependencies[id], // exclude dependencies from build
     plugins: [
       resolve({
         browser: true,
@@ -67,6 +70,10 @@ function genConfig(name) {
       exports: "named",
       file: opts.dest,
       format: opts.format,
+      // define globals in window from external dependencies
+      globals: () => pack.dependencies && Object.keys(pack.dependencies).map((key) => ({
+        [key]: camelCase(key)
+      })),
       name: opts.moduleName || projectName
     }
   };
