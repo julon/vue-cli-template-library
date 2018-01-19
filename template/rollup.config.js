@@ -71,9 +71,9 @@ function genConfig(name) {
       file: opts.dest,
       format: opts.format,
       // define globals in window from external dependencies
-      globals: () => pack.dependencies && Object.keys(pack.dependencies).map((key) => ({
+      globals: Object.assign({}, ...Object.keys(pack.dependencies).map((key) => ({
         [key]: camelCase(key)
-      })),
+      }))),
       name: opts.moduleName || projectName
     }
   };
