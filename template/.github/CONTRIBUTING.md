@@ -41,7 +41,7 @@ npm run cz
 - Commit using [Commit Convention](.github/COMMIT_CONVENTION.md) and push to github
 - If deployment is setup correctly(see next section), your components will be available on npm and release on github :)
 
-## Deployment
+## CI, Deployment & Releases
 
 This repository is intended to be used with travisCI for deployment. [Semantic-release](https://github.com/semantic-release/semantic-release) is used and setup to auto-generate changelog, auto-publish to npm and auto-release to github based on commit messages structure. For it to work properly you have to follow this [Commit Convention](.github/COMMIT_CONVENTION.md).
 
@@ -52,23 +52,13 @@ So to enjoy an automated continuous deployment, it is required to have a NPM acc
 Warning: After setting up semantic-release, your library will be publish automatically to npm and release to github. If you are not ready to publish to npm or to release you can do this later.
 
 ```bash
-# Login to npm from your command-line
-npm login
+# Activate travisCI for your repository and launch semantic-release-cli
+cd yourProjectFolder
+npm install -g semantic-release-cli && semantic-release-cli setup
 
-# Your npm account must be protected by a two-factor authentification in auth-only mode
-npm profile enable-2fa auth-only
-
-# Create your token manually since semantic-release-cli is not working yet with npm in 2FA
-npm token create
-
-# Then activate travisCI for your repository and launch semantic-release-cli
-npm install -g semantic-release-cli
-cd thisRepository
-semantic-release-cli setup --npm-token=YOUR_NPM_TOKEN
-
-# Fill your github credentials, select travisCI and select to replace .travis.yml
+# Fill your github and npm credentials, select travisCI and select to replace .travis.yml
 # TravisCI will be automatically enabled for your github repository
 # And tokens will be injected in your travisCI repository config as environment variables
 ```
 
-If everything is setup properly, every commit on master will generate a release if needed automatically. For the win.
+If everything is setup properly, every commit on master will automatically generate a release if needed. For the win.

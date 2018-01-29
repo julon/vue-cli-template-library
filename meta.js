@@ -27,6 +27,6 @@ module.exports = {
       default: "user/repository"
     }
   },
-  "skipInterpolation": "src/**/*.vue",
+  "skipInterpolation": "src/**/*.{html,vue}",
   "completeMessage": "To get started and/or setup your automatic deployment, please read the contributing documentation: {{destDirName}}/.github/CONTRIBUTING.md"
 }
