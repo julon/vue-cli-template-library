@@ -1,3 +1,11 @@
+<a name="1.2.2"></a>
+## [1.2.2](https://github.com/julon/vue-cli-template-library/compare/v1.2.1...v1.2.2) (2018-03-10)
+
+
+### Bug Fixes
+
+* add release.config.js ([e2af552](https://github.com/julon/vue-cli-template-library/commit/e2af552))
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/julon/vue-cli-template-library/compare/6a11b7671e6a07a4d366cc67da987aab790b7c94...v1.2.1) (2018-01-19)
 
