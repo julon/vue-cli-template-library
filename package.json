@@ -31,7 +31,7 @@
     "@semantic-release/npm": "^3.2.2",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
-    "husky": "^0.14.3",
+    "husky": "^1.1.4",
     "semantic-release": "^15.0.2",
     "vue-cli": "^2.9.3"
   },
