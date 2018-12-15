@@ -32,7 +32,7 @@
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
-    "semantic-release": "^15.0.2",
+    "semantic-release": "^15.13.0",
     "vue-cli": "^2.9.3"
   },
   "config": {
